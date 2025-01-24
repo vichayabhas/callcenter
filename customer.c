@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
 	//
 	// OS -- OPEN NAMED SEMAPHORE HERE
-sem_init();
+sem_t *callcenter=sem_open("callcenter",0);
 	//
 
 
@@ -31,7 +31,7 @@ sem_init();
 		printf("Next customer calls the call center, press ten buttons, and listens to silly music.\n");
 		time_t t0 = time(NULL);
 		// Wait for an agent
-		sem_wait();
+		sem_wait(callcenter);
 
 
 		//
@@ -49,7 +49,7 @@ sem_init();
 		//
 		// OS -- UNLOCK SEMAPHORE HERE
 		//
-		sem_post();
+		sem_post(callcenter);
 
 
 		printf("Customer ends the call.\n");
