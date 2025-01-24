@@ -49,7 +49,7 @@ sem_init();
 		//
 		// OS -- UNLOCK SEMAPHORE HERE
 		//
-		sem_post()
+		sem_post();
 
 
 		printf("Customer ends the call.\n");
