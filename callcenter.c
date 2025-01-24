@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 		//
 		// OS -- PLACE CURRENT VALUE OF SEMAPHORE IN 'semval' HERE
 		//
-		int semval=sem_count()
+		int semval=sem_count();
 
 
 		printf("There are %d agents available now.\n", semval);
